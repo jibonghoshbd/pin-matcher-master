@@ -19,6 +19,7 @@ function getGeneratePin() {
 document.getElementById('key-pad').addEventListener('click', function (event) {
     const numberPad = event.target.innerText
     const numberInput = document.getElementById('number-input');
+
     if (isNaN(numberPad)) {
         if (numberPad === 'C') {
             numberInput.value = '';
@@ -28,7 +29,6 @@ document.getElementById('key-pad').addEventListener('click', function (event) {
         const currentNumber = previousNumber + numberPad;
         numberInput.value = currentNumber;
     }
-
 })
 
 
