@@ -31,8 +31,23 @@ document.getElementById('key-pad').addEventListener('click', function (event) {
     }
 })
 
+// handel submitbtn
+function submitBtn() {
+    const displayPin = document.getElementById('display-pin').value;
+    const typedNumber = document.getElementById('number-input').value;
+    const errorMessage = document.getElementById('error-message');
+    const successMessage = document.getElementById('success-message');
+    if (displayPin == typedNumber) {
+        successMessage.style.display = 'block'
+        errorMessage.style.display = 'none'
+
+    } else {
+        errorMessage.style.display = 'block'
+        successMessage.style.display = 'none'
+    }
+}
 
 
 
-// https://web.programming-hero.com/web-4/video/web-4-27-6-use-event-bubble-to-create-calculator-and-clear
+
 
